@@ -5,6 +5,15 @@ class Solution:
                 if nums[i]+nums[j] == target:
                     return [i,j]
 
+#Using hash table
+#time complexity reduces
+numToIndex = {}
+for i in range(len(nums)):
+    diff= target - nums[i]
+    if diff in numToIndex:
+        print([i,numToIndex[diff]])
+    numToIndex[nums[i]] = i
+
 
     
         
